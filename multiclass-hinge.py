@@ -57,6 +57,7 @@ print(f'Test results - Loss: {test_results[0]} - Accuracy: {test_results[1]*100}
   The Onehot2Int class is used to adapt the model so that it generates non-categorical data.
   This is required by the `plot_decision_regions` function.
   The code is courtesy of dr. Sebastian Raschka at https://github.com/rasbt/mlxtend/issues/607.
+  Copyright (c) 2014-2016, Sebastian Raschka. All rights reserved. Mlxtend is licensed as https://github.com/rasbt/mlxtend/blob/master/LICENSE-BSD3.txt.
   Thanks!
 '''
 # No hot encoding version
