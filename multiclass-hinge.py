@@ -14,8 +14,6 @@ from mlxtend.plotting import plot_decision_regions
 num_samples_total = 3000
 training_split = 1000
 num_classes = 3
-feature_vector_length = len(X_training[0])
-input_shape = (feature_vector_length,)
 loss_function_used = 'categorical_hinge'
 learning_rate_used = 0.03
 optimizer_used = keras.optimizers.adam(lr=learning_rate_used)
@@ -31,6 +29,10 @@ X_training = X[training_split:, :]
 X_testing = X[:training_split, :]
 Targets_training = categorical_targets[training_split:]
 Targets_testing = categorical_targets[:training_split].astype(np.integer)
+
+# Set shape based on data
+feature_vector_length = len(X_training[0])
+input_shape = (feature_vector_length,)
 
 # Generate scatter plot for training data
 plt.scatter(X_training[:,0], X_training[:,1])
